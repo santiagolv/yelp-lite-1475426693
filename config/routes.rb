@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Restaurant_ownership resource:
+  # CREATE
+  get "/restaurant_ownerships/new", :controller => "restaurant_ownerships", :action => "new"
+  post "/create_restaurant_ownership", :controller => "restaurant_ownerships", :action => "create"
+
+  # READ
+  get "/restaurant_ownerships", :controller => "restaurant_ownerships", :action => "index"
+  get "/restaurant_ownerships/:id", :controller => "restaurant_ownerships", :action => "show"
+
+  # UPDATE
+  get "/restaurant_ownerships/:id/edit", :controller => "restaurant_ownerships", :action => "edit"
+  post "/update_restaurant_ownership/:id", :controller => "restaurant_ownerships", :action => "update"
+
+  # DELETE
+  get "/delete_restaurant_ownership/:id", :controller => "restaurant_ownerships", :action => "destroy"
+  #------------------------------
+
   devise_for :restaurant_owners
   # Routes for the Photo_review resource:
   # CREATE
