@@ -26,3 +26,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Neighborhood has many restaurants -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Restaurants
+      </li>
+
+      <% @neighborhood.restaurants.each do |restaurants_profile| %>
+        <li class="list-group-item">
+          <a href="/restaurants_profiles/<%= restaurants_profile.id %>">
+            <%= restaurants_profile.name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

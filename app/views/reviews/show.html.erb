@@ -32,3 +32,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Review has many photo_reviews -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Photo_reviews
+      </li>
+
+      <% @review.photo_reviews.each do |photo_review| %>
+        <li class="list-group-item">
+          <a href="/photo_reviews/<%= photo_review.id %>">
+            <%= photo_review.review_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
