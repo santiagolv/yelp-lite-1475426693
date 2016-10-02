@@ -1,5 +1,7 @@
 ActiveAdmin.register RestaurantOwnership do
 
+ permit_params :restaurant_owner_id, :restaurant_id
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
