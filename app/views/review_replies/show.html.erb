@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Review Reply #<%= @review_reply.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Review</dt>
+      <dd><%= @review_reply.review_id %></dd>
+
+      <dt>Owner</dt>
+      <dd><%= @review_reply.owner_id %></dd>
+
+      <dt>Reply content</dt>
+      <dd><%= @review_reply.reply_content %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/review_replies" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/review_replies/<%= @review_reply.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_review_reply/<%= @review_reply.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
