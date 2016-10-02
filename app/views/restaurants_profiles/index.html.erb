@@ -25,7 +25,7 @@
         <td><%= restaurants_profile.website %></td>
         <td><%= restaurants_profile.address %></td>
         <td><%= restaurants_profile.cover_photo %></td>
-        <td><%= restaurants_profile.neighborhood_id %></td>
+        <td><%= restaurants_profile.neighborhood.neighborhood %></td>
         <td>
           <a href="/restaurants_profiles/<%= restaurants_profile.id %>" class="btn btn-primary">Show</a>
           <a href="/restaurants_profiles/<%= restaurants_profile.id %>/edit" class="btn btn-warning">Edit</a>
