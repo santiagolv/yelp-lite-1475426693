@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :restaurant_owners
   # Routes for the Photo_review resource:
   # CREATE
   get "/photo_reviews/new", :controller => "photo_reviews", :action => "new"
