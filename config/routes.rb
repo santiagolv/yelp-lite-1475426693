@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Restaurants_profile resource:
+  # CREATE
+  get "/restaurants_profiles/new", :controller => "restaurants_profiles", :action => "new"
+  post "/create_restaurants_profile", :controller => "restaurants_profiles", :action => "create"
+
+  # READ
+  get "/restaurants_profiles", :controller => "restaurants_profiles", :action => "index"
+  get "/restaurants_profiles/:id", :controller => "restaurants_profiles", :action => "show"
+
+  # UPDATE
+  get "/restaurants_profiles/:id/edit", :controller => "restaurants_profiles", :action => "edit"
+  post "/update_restaurants_profile/:id", :controller => "restaurants_profiles", :action => "update"
+
+  # DELETE
+  get "/delete_restaurants_profile/:id", :controller => "restaurants_profiles", :action => "destroy"
+  #------------------------------
+
   # Routes for the Neighborhood resource:
   # CREATE
   get "/neighborhoods/new", :controller => "neighborhoods", :action => "new"
