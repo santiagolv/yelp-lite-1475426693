@@ -16,7 +16,7 @@
 
       <% @restaurant_ownerships.each do |restaurant_ownership| %>
       <tr>
-        <td><%= restaurant_ownership.restaurant_owner_id %></td>
+        <td><%= restaurant_ownership.restaurant_owner.name %></td>
         <td><%= restaurant_ownership.restaurant_id %></td>
         <td>
           <a href="/restaurant_ownerships/<%= restaurant_ownership.id %>" class="btn btn-primary">Show</a>
