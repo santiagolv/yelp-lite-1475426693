@@ -18,7 +18,7 @@
       <% @review_replies.each do |review_reply| %>
       <tr>
         <td><%= review_reply.review.content %></td>
-        <td><%= review_reply.owner_id %></td>
+        <td><%= review_reply.owner.name %></td>
         <td><%= review_reply.reply_content %></td>
         <td>
           <a href="/review_replies/<%= review_reply.id %>" class="btn btn-primary">Show</a>
