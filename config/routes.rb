@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Routes for the Restaurants_profile resource:
   # CREATE
   get "/restaurants_profiles/new", :controller => "restaurants_profiles", :action => "new"
